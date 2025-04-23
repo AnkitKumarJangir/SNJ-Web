@@ -1,0 +1,63 @@
+<header class="fixed top-0 z-50 w-full bg-white/90 backdrop-blur-md border-b">
+  <div class="container mx-auto px-4 flex h-16 items-center justify-between">
+    <div class="flex items-center gap-2">
+      <span class="font-bold text-xl flex items-center gap-2 text-snj-orange logo-text" [routerLink]="['/']"   (click)="showMoileMenu = false" fragment="home"><img [style.height.px]="50" class="rounded-full" src="/images/logo.png"/> Suniye Neta Jee</span>
+    </div>
+
+    <nav class="hidden md:flex items-center gap-6">
+      <a [routerLink]="['/']" fragment="features" class="text-sm font-medium hover:text-snj-blue transition-colors">
+        Features
+      </a>
+      <a [routerLink]="['/']" fragment="user-types" class="text-sm font-medium hover:text-snj-blue transition-colors">
+        User Types
+      </a>
+      <a [routerLink]="['/']" fragment="schemes" class="text-sm font-medium hover:text-snj-blue transition-colors">
+        Schemes
+      </a>
+      <a [routerLink]="['/']" fragment="tools" class="text-sm font-medium hover:text-snj-blue transition-colors">
+        Voter Tools
+      </a>
+      <a [routerLink]="['/']" fragment="rewards" class="text-sm font-medium hover:text-snj-blue transition-colors">
+        Rewards
+      </a>
+      <button
+        class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 h-10 px-4 py-2 bg-snj-orange hover:bg-snj-orange/90 text-white">Download
+        Now</button>
+    </nav>
+
+    <Button variant="ghost" size="icon" class="md:hidden toggle-btn" (click)="showMoileMenu = !showMoileMenu">
+      <i class="fa fa-fw fa-bars"></i>
+    </Button>
+  </div>
+
+  @if (showMoileMenu) {
+  <div class="md:hidden absolute top-16 left-0 right-0 bg-white border-b shadow-lg">
+    <div class="container mx-auto px-4 py-4 flex flex-col gap-4">
+      <a [routerLink]="['/']" fragment="features" (click)="showMoileMenu = false"
+        class="text-sm font-medium p-2 hover:bg-gray-100 rounded">
+        Features
+      </a>
+      <a [routerLink]="['/']" fragment="user-types" (click)="showMoileMenu = false"
+        class="text-sm font-medium p-2 hover:bg-gray-100 rounded">
+        User Types
+      </a>
+      <a [routerLink]="['/']" fragment="schemes" (click)="showMoileMenu = false"
+        class="text-sm font-medium p-2 hover:bg-gray-100 rounded">
+        Schemes
+      </a>
+      <a [routerLink]="['/']" fragment="tools" (click)="showMoileMenu = false"
+        class="text-sm font-medium p-2 hover:bg-gray-100 rounded">
+        Voter Tools
+      </a>
+      <a [routerLink]="['/']" fragment="rewards" (click)="showMoileMenu = false"
+        class="text-sm font-medium p-2 hover:bg-gray-100 rounded">
+        Rewards
+      </a>
+      <Button
+        class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 h-10 px-4 py-2 w-full bg-snj-orange hover:bg-snj-orange/90 text-white">
+        Download Now
+      </Button>
+    </div>
+  </div>
+  }
+</header>

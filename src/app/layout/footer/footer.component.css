@@ -1,0 +1,24 @@
+ul{
+    padding-left: 0px;
+    color: #d1d5db;
+}
+li{
+    margin-bottom: 10px;
+    text-decoration: none;
+    list-style: none;
+}
+a{
+    color: #d1d5db;
+    text-decoration: none;
+}
+.font-bold {
+    font-weight: 700;
+}
+.text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+}
+li:hover{
+    cursor: pointer;
+    color: #000000;
+}

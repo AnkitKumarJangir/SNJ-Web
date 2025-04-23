@@ -1,0 +1,33 @@
+.h-20 {
+    height: 5rem;
+}
+
+/* nav{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+} */
+.toggle-btn{
+    display: none;
+}
+.mobile-nav{
+    display: none;
+}
+@media (max-width: 1250px) {
+    /* … */
+    .nav-full-sceen{
+        display: none;
+    }
+    .toggle-btn{
+        display: block;
+    }
+    .mobile-nav{
+        display: block;
+    }
+}
+.mobile-nav a{
+    text-decoration: none;
+}
+
+.logo-text{
+    font-weight: bold;
+    font-family: ui-monospace;
+}
